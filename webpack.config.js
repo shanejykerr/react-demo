@@ -1,8 +1,14 @@
-import path from 'path';
+const path = require('path');
 
-export default {
-    entry: 'client/components/entry.ts',
-    modules: {
+module.exports = {
+    mode: 'development',
+    entry: './client/entry.js',
+    output: {
+        filename: "bundle.js",
+        path: path.resolve(__dirname, "dist"),
+        publicPath: "/dist/"
+    },
+    module: {
         rules: [
             {
                 test: /\.css$/,
@@ -16,7 +22,12 @@ export default {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: "babel-loader"
+            },
+            {
+                test: /\.jsx$/,
+                exclude: /node_modules/,
+                loader: "babel-loader"
             }
         ]
-    }
-}
+    },
+};
