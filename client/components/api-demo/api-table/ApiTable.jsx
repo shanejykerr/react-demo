@@ -23,14 +23,6 @@ class ApiTable extends React.Component {
     }
 
     filterData(data) {
-        console.log('Data being filtered:', data.map((item) => ({
-            'Date': item.date,
-            'ID': item.identifier,
-            'Latitude': item.centroid_coordinates.lat,
-            'Longitude': item.centroid_coordinates.lon,
-            'Image': this.getImageSrc(item.image)
-        })));
-
         return data.map((item) => ({
             'Date': item.date,
             'ID': item.identifier,
@@ -51,20 +43,17 @@ class ApiTable extends React.Component {
     }
 
     fetchData() {
-        console.log(`this.props.currentViewDate IN FETCH: ${this.getFetchEndpoint()}`)
         fetch(this.getFetchEndpoint())
             .then((res) => {
                 return res.json();
             })
             .then(data => {
-                const filteredData = this.filterData(data);    
-                console.log(`Current Data:`, filteredData);
+                const filteredData = this.filterData(data);
 
                 this.setState({
                     data: filteredData,
                     headerList: Object.keys(filteredData[0]),
                 }, () => {
-                console.log(`State Data:`, this.state.data);
                 })
             })
             .catch((err) => {
@@ -73,38 +62,22 @@ class ApiTable extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        console.log('========================== I AM UPDATING! ==========================');
-        console.log(`componentDidUpdate prevProps Date:`, prevProps.currentViewDate);
-        console.log(`componentDidUpdate props Date:`, this.props.currentViewDate);
-        console.log(`componentDidUpdate State:`, this.state.data);
         this.fetchData();
-        console.log(`componentDidUpdate prevProps Date POST FETCH:`, prevProps.currentViewDate);    
-        console.log(`componentDidUpdate props POST FETCH:`, this.props.currentViewDate);    
-        console.log(`componentDidUpdate State POST FETCH:`, this.state.data);    
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('========================== I AM CHECKING! ==========================');
-        console.log(`this.props.currentViewDate: ${this.props.currentViewDate}`);
-        console.log(`nextProps.currentViewDate: ${nextProps.currentViewDate}`);
-        console.log(`This State Data:`, this.state.data);
-        console.log(`Next State Data:`, nextState.data);
         if (
             this.props.currentViewDate === '' ||
             nextProps.currentViewDate !== this.props.currentViewDate ||
             this.state.data.length === 0 ||
             JSON.stringify(this.state.data) !== JSON.stringify(nextState.data)
         ) {
-            console.log('========================== RETURNING TRUE! ==========================');
             return true
         }
-        console.log('========================== RETURNING FALSE! ==========================');
         return false;
     }
 
     render() {
-        console.log('========================== I AM RENDERING! ==========================');
-        console.log('State Data on RENDER:', this.state.data);
         return(
             <table className="api-table">
                 <thead>

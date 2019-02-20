@@ -22,8 +22,6 @@ class ApiDemo extends React.Component {
     }
 
     setViewDate(date) {
-        console.log('========================== NEW DATE BEING SET! ==========================');
-        console.log(`${date} vs ${this.state.currentViewDate}`);
         if (date === this.state.currentViewDate) return;
 
         this.setState({
