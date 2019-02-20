@@ -1,16 +1,23 @@
 import React from 'react';
-import Navbar from './common/Navbar.jsx';
-import Grid from './grid/Grid.jsx';
-import Footer from './common/Footer.jsx';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Navbar from './global/Navbar.jsx';
+import Home from './home/Home.jsx';
+import DragDrop from './dragdrop/DragDrop.jsx';
+import ApiDemo from './api-demo/ApiDemo.jsx';
+import Footer from './global/Footer.jsx';
 
 class App extends React.Component {
     render() {
         return (
-            <main>
-                <Navbar />
-                <Grid />
-                <Footer />
-            </main>
+            <Router>
+                <div className="layout">
+                    <Navbar />
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/drag-drop" component={DragDrop}/>
+                    <Route path="/api" component={ApiDemo}/>
+                    <Footer />
+                </div>
+            </Router>
         );
     }
 }

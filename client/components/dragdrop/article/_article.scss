@@ -1,24 +1,24 @@
-.grid-article {
+.dragdrop-article {
     display: inline-block;
     max-width: 30%;
     padding-right: 1.5%;
 }
 
-.grid-article:last-child {
+.dragdrop-article:last-child {
     padding-right: 0;
 }
 
-.grid-article-image {
+.dragdrop-article-image {
     max-width: 500px;
     width: 100%;
 }
 
 @media screen and (max-width: 767px) {
-    .grid-article {
+    .dragdrop-article {
         max-width: 100%;
         padding: 0 0 20px;
     }
-    .grid-article:last-child {
+    .dragdrop-article:last-child {
         padding: 0;
     }
 }

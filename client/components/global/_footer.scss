@@ -1,26 +1,26 @@
-.grid-footer {
-    background-color: #e6e6e6;
+.footer {
+    background-color: $footer-background-color;
     padding: 0 20px 40px;
 }
 
-.grid-footer-links {
+.footer-links {
     vertical-align: bottom;
     display: inline-block;
     text-align: center;
     width: 30%;
 }
 
-.grid-footer-descriptions {
+.footer-descriptions {
     display: inline-block;
     width: 70%;
 }
 
 @media screen and (max-width: 1023px) {
-    .grid-footer-links {
+    .footer-links {
         width: 40%;
     }
 
-    .grid-footer-descriptions {
+    .footer-descriptions {
         width: 60%;
     }
 }

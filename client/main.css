@@ -1,40 +1,5 @@
-.grid {
-  padding: 40px 100px;
-}
-
-@media screen and (max-width: 1023px) {
-  .grid {
-    padding: 40px 20px;
-  }
-}
-.grid-footer {
-  background-color: #e6e6e6;
-  padding: 0 20px 40px;
-}
-
-.grid-footer-links {
-  vertical-align: bottom;
-  display: inline-block;
-  text-align: center;
-  width: 30%;
-}
-
-.grid-footer-descriptions {
-  display: inline-block;
-  width: 70%;
-}
-
-@media screen and (max-width: 1023px) {
-  .grid-footer-links {
-    width: 40%;
-  }
-
-  .grid-footer-descriptions {
-    width: 60%;
-  }
-}
-.grid-navbar {
-  background-color: #e6e6e6;
+.navbar {
+  background-color: #7395ae;
   width: 100%;
 }
 
@@ -44,37 +9,170 @@
   padding: 20px 40px 20px 20px;
 }
 
-.grid-nav {
+.nav {
   display: inline-block;
 }
 
 .nav-link {
+  color: #000;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.date-picker {
+  background-color: #d9d9d9;
+  border: 3px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.date-picker-description, .date-select {
+  text-align: center;
+  padding: 10px;
+}
+
+.date-picker-description:focus, .date-select:focus {
+  outline: none;
+}
+
+.date-picker-header {
+  display: inline-block;
+}
+
+.date-container {
+  text-align: center;
+}
+
+.date-select {
+  background-color: #7395ae;
+  border: 2px solid;
+  border-radius: 10px;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  margin: 0 5px 10px;
+  text-decoration: none;
+}
+
+.home {
+  padding: 40px 100px;
+  height: 100%;
+  overflow: auto;
+}
+@media screen and (max-width: 1023px) {
+  .home {
+    padding: 40px 20px;
+  }
+}
+
+.update-tab {
+  padding: 20px 0;
+}
+
+.update-header {
+  display: inline;
+}
+
+.dragdrop {
+  padding: 40px 100px;
+}
+@media screen and (max-width: 1023px) {
+  .dragdrop {
+    padding: 40px 20px;
+  }
+}
+
+.dragdrop-description {
   padding: 20px;
 }
 
-.grid-article {
+.dragdrop-article {
   display: inline-block;
   max-width: 30%;
   padding-right: 1.5%;
 }
 
-.grid-article:last-child {
+.dragdrop-article:last-child {
   padding-right: 0;
 }
 
-.grid-article-image {
+.dragdrop-article-image {
   max-width: 500px;
   width: 100%;
 }
 
 @media screen and (max-width: 767px) {
-  .grid-article {
+  .dragdrop-article {
     max-width: 100%;
     padding: 0 0 20px;
   }
 
-  .grid-article:last-child {
+  .dragdrop-article:last-child {
     padding: 0;
+  }
+}
+.api-demo {
+  padding: 40px 100px;
+}
+@media screen and (max-width: 1023px) {
+  .api-demo {
+    padding: 40px 20px;
+  }
+}
+
+.api-description {
+  padding: 20px 60px;
+}
+
+.api-table {
+  border: 2px solid;
+  width: 100%;
+}
+
+.table-header {
+  border: 3px solid;
+  background-color: #d9d9d9;
+  padding: 10px;
+  width: 20%;
+}
+
+.alternate-table-row {
+  background-color: #d9d9d9;
+}
+
+.table-item {
+  border: 1px solid;
+  text-align: center;
+}
+
+.table-image {
+  width: 100%;
+}
+
+.footer {
+  background-color: #557a95;
+  padding: 0 20px 40px;
+}
+
+.footer-links {
+  vertical-align: bottom;
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+}
+
+.footer-descriptions {
+  display: inline-block;
+  width: 70%;
+}
+
+@media screen and (max-width: 1023px) {
+  .footer-links {
+    width: 40%;
+  }
+
+  .footer-descriptions {
+    width: 60%;
   }
 }
 html body {

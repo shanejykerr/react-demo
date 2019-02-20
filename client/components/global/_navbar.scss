@@ -1,5 +1,5 @@
-.grid-navbar {
-    background-color: #e6e6e6;
+.navbar {
+    background-color: $navbar-background-color;
     width: 100%;
 }
 
@@ -9,10 +9,12 @@
     padding: 20px 40px 20px 20px;
 }
 
-.grid-nav {
+.nav {
     display: inline-block;
 }
 
 .nav-link {
+    color: $navbar-link-color;
     padding: 20px;
+    text-decoration: none;
 }

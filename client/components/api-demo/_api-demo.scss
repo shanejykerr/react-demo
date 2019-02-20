@@ -1,0 +1,7 @@
+.api-demo {
+    @include content-body();
+}
+
+.api-description {
+    padding: 20px 60px;
+}

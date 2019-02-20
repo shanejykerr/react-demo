@@ -1,8 +1,17 @@
-@import "components/grid/grid.scss";
-@import "components/common/footer.scss";
-@import "components/common/navbar.scss";
-@import "components/article/article.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "components/global/_navbar.scss";
+@import "components/global/_datepicker.scss";
+@import "components/home/_home.scss";
+@import "components/dragdrop/_dragdrop.scss";
+@import "components/dragdrop/article/_article.scss";
+@import "components/api-demo/_api-demo.scss";
+@import "components/api-demo/api-table/_api-table.scss";
+@import "components/api-demo/api-table/api-table-header/api-table-header.scss";
+@import "components/api-demo/api-table/api-table-row/api-table-row.scss";
+@import "components/global/_footer.scss";
 
+//Normalizing the body
 html body {
     margin: 0;
 }

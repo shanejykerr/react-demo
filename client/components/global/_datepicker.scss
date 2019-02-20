@@ -1,0 +1,35 @@
+.date-picker {
+    background-color: #d9d9d9;
+    border: 3px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.date-picker-description {
+    text-align: center;
+    padding: 10px;
+}
+
+.date-picker-description:focus {
+    outline: none;
+}
+
+.date-picker-header {
+    display: inline-block;
+}
+
+.date-container {
+    text-align: center;
+}
+
+.date-select {
+    @extend .date-picker-description;
+    background-color: #7395ae;
+    border: 2px solid;
+    border-radius: 10px;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    margin: 0 5px 10px;
+    text-decoration: none;
+}

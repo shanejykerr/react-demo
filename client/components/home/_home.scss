@@ -1,0 +1,13 @@
+.home {
+    @include content-body();
+    height: 100%;
+    overflow: auto;
+}
+
+.update-tab {
+    padding: 20px 0;
+}
+
+.update-header {
+    display: inline;
+}

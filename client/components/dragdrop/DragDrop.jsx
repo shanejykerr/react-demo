@@ -1,7 +1,7 @@
 import React from 'react';
-import Article from '../article/Article.jsx';
+import Article from './article/Article.jsx';
 
-class Grid extends React.Component {
+class DragDrop extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -32,7 +32,12 @@ class Grid extends React.Component {
 
     render() {
         return (
-            <section className="grid">
+            <main className="dragdrop">
+                <section className="dragdrop-description">
+                    This is an example drag and drop that utilizes standard HTML events, along with component specific states 
+                    and events. In this section, you can transfer images from one "article" to another, without disturbing the 
+                    added content.
+                </section>
                 <Article
                     dragStartHandler={this.dragStartHandler}
                     dropHandler={this.dropHandler}
@@ -48,9 +53,9 @@ class Grid extends React.Component {
                     dropHandler={this.dropHandler}
                     image={this.state.imageList[2]}
                 />
-            </section>
+            </main>
         )
     }
 }
 
-export default Grid;
+export default DragDrop;
