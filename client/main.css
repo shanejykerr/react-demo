@@ -1,3 +1,10 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
 .navbar {
   background-color: #7395ae;
   width: 100%;
@@ -55,9 +62,8 @@
 }
 
 .home {
+  margin-bottom: auto;
   padding: 40px 100px;
-  height: 100%;
-  overflow: auto;
 }
 @media screen and (max-width: 1023px) {
   .home {
@@ -74,6 +80,7 @@
 }
 
 .dragdrop {
+  margin-bottom: auto;
   padding: 40px 100px;
 }
 @media screen and (max-width: 1023px) {
@@ -112,6 +119,7 @@
   }
 }
 .api-demo {
+  margin-bottom: auto;
   padding: 40px 100px;
 }
 @media screen and (max-width: 1023px) {
@@ -176,7 +184,12 @@
   }
 }
 html body {
+  min-height: 100vh;
   margin: 0;
+}
+
+#app {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=main.css.map */

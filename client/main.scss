@@ -1,5 +1,6 @@
 @import "_variables.scss";
 @import "_mixins.scss";
+@import "components/_app.scss";
 @import "components/global/_navbar.scss";
 @import "components/global/_datepicker.scss";
 @import "components/home/_home.scss";
@@ -13,5 +14,10 @@
 
 //Normalizing the body
 html body {
+    min-height: 100vh;
     margin: 0;
+}
+
+#app {
+    height: 100vh;
 }

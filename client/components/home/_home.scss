@@ -1,7 +1,5 @@
 .home {
     @include content-body();
-    height: 100%;
-    overflow: auto;
 }
 
 .update-tab {

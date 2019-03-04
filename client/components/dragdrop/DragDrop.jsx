@@ -35,8 +35,7 @@ class DragDrop extends React.Component {
             <main className="dragdrop">
                 <section className="dragdrop-description">
                     This is an example drag and drop that utilizes standard HTML events, along with component specific states 
-                    and events. In this section, you can transfer images from one "article" to another, without disturbing the 
-                    added content.
+                    and events. In this section, you can drag one image and drop it on top of another to switch the images' positions.
                 </section>
                 <Article
                     dragStartHandler={this.dragStartHandler}
