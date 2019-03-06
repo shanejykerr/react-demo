@@ -1,12 +1,15 @@
 import React from 'react';
 import Article from './article/Article.jsx';
+import Bird from '../../images/bird.jpg';
+import Gears from '../../images/gears.jpg';
+import Water from '../../images/water.jpg';
 
 class DragDrop extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             currentDragTarget: '',
-            imageList: ["../../images/bird.jpg", "../../images/gears.jpg", "../../images/water.jpg"]
+            imageList: [Bird, Gears, Water]
         };
         this.dragStartHandler = this.dragStartHandler.bind(this);
         this.dropHandler = this.dropHandler.bind(this);
